@@ -5,15 +5,15 @@ Library  SeleniumLibrary
 
 ${browser}  Chrome
 ${pagina}  https://gmail.com/
-${usuario}  alvarez99@gmail.com
-${contraseña}  tucontraseña
+${usuario}  your_mail@gmail.com
+${contraseña}  yourPassword
 
 
 *** Test Cases ***
 Ingrear Cuenta De Correo
     Open browser    ${pagina}   ${browser}
     input text  id:identifierId   ${usuario}
-    click element  xpath://*[@id="identifierNext"]/span/span
+    click element  xpath://button[ancestor::div[@id="identifierNext"]]
     Sleep  3s
     input text  name:password    ${contraseña}
     click element  xpath://*[@id="passwordNext"]/span/span
